@@ -1,7 +1,37 @@
 ul li {
     list-style: none;
+    display: inline;
+}
+ul {
+    display: inline;
 }
 .header-top-right {
     display: inline-flex;
     font-size: 11px;
+}
+
+.collection-big-left {
+    background: url("http://via.placeholder.com/1024x400") no-repeat center;
+    -webkit-background-size:cover;
+    background-size: cover;
+    height: 200px;
+}
+.collection-middle-top-right {
+    background: url("http://via.placeholder.com/1024x400") no-repeat center;
+    -webkit-background-size:cover;
+    background-size: cover;
+    height: 100px;
+    margin-bottom: 2px;
+}
+.colection-smoll-bottom-right {
+    background: url("http://via.placeholder.com/1024x400") no-repeat center;
+    -webkit-background-size:cover;
+    background-size: cover;
+    height: 100px;
+}
+.colection-smoll-bottom-left {
+    background: url("http://via.placeholder.com/1024x400") no-repeat center;
+    -webkit-background-size:cover;
+    background-size: cover;
+    height: 100px;
 }
