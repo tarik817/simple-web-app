@@ -1,10 +1,15 @@
 html, body {
     overflow-x: hidden;
 }
-ul li {
+nav ul li {
     list-style: none;
     display: inline;
 }
+.subscribe ul li {
+    list-style: none;
+    display: inline;
+}
+
 ul {
     display: inline;
 }
@@ -74,13 +79,51 @@ ul {
 }
 .brands-title {
     position: relative;
-    width: 100vw;
-    margin: 0 auto;
     background:  #fff center;
     display: inline-flex;
     justify-content: center;
+    z-index: 2;
+    margin-left: 43vw;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.brands-title p {
-    padding: 10px;
-    background:  #fff center;
+.brands-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.favorite-brands .block-relative:last-child {
+    margin-top: 20px;
+}
+
+.about {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    padding-right: 10px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container ul li {
+    list-style: none;
+}
+
+footer .social ul{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-nav p {
+    margin-top: 30px;
+    color: #000;
+    font-size: 16px;
+    line-height: bold;
 }
