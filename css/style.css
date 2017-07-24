@@ -1,3 +1,6 @@
+html, body {
+    overflow-x: hidden;
+}
 ul li {
     list-style: none;
     display: inline;
@@ -34,4 +37,50 @@ ul {
     -webkit-background-size:cover;
     background-size: cover;
     height: 100px;
+}
+
+.hot-navigation {
+    float: right;
+}
+.hot-products {
+    overflow-x: hidden;
+}
+
+.block-relative {
+    position: relative;
+}
+
+.grey-line {
+    position: absolute;
+    width: 100%;
+    border: 1px solid #999;
+    top: 50%;
+}
+.clearence-img {
+    position: relative;
+    width: 91vw;
+    margin: 0 auto;
+    height: 150px;
+    -webkit-background-size: contain;
+    background-size: contain;
+    display: inline-flex;
+    justify-content: center;
+}
+.clearence-img img {
+    z-index: 2;
+    background:  #fff center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.brands-title {
+    position: relative;
+    width: 100vw;
+    margin: 0 auto;
+    background:  #fff center;
+    display: inline-flex;
+    justify-content: center;
+}
+.brands-title p {
+    padding: 10px;
+    background:  #fff center;
 }
