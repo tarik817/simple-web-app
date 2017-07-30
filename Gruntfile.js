@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         uglify: {
             my_target: {
                 files: {
-                    'app/js/main.min.js': ['app/js/main.js']
+                    'app/js/main.min.js': ['app/js/main.js', 'app/js/add/*.js']
                 },
             },
         },
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     //Concat files
         concat: {
             basic: {
-                src : ['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'app/js/main.js'],
+                src : ['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'app/js/main.min.js'],
                 dest : 'public/js/build.min.js',
             },
             extras: {
@@ -81,5 +81,5 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['less', 'autoprefixer', 'uglify', 'concat', 'express', 'watch']);
-    grunt.registerTask('test', 'autoprefixer');
+    grunt.registerTask('test', 'uglify');
 };
