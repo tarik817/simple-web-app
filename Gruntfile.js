@@ -18,6 +18,14 @@ module.exports = function(grunt) {
                 }
             }
         },
+    //Autoprefixer
+        autoprefixer:{
+            dist:{
+                files:{
+                    'app/css/main.min.css':'app/css/main.min.css'
+                }
+            }
+        },
 
     //Uglify files
         uglify: {
@@ -54,8 +62,8 @@ module.exports = function(grunt) {
     //Watching the files in my project
         watch: {
             styles: {
-                files: ['app/**/*.less', 'app/*.html', 'app/js/*.js', 'public/*.html'],
-                tasks: ['less','uglify', 'concat'],
+                files: ['app/**/*.less', 'app/css/**/*.css', 'app/*.html', 'app/js/*.js', 'public/*.html'],
+                tasks: ['less', 'autoprefixer', 'uglify', 'concat'],
                 options: {
                     nospawn: true
                 }
@@ -65,11 +73,13 @@ module.exports = function(grunt) {
 
     // Load the plugin task.
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-express');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['less', 'uglify', 'concat', 'express', 'watch']);
+    grunt.registerTask('default', ['less', 'autoprefixer', 'uglify', 'concat', 'express', 'watch']);
+    grunt.registerTask('test', 'autoprefixer');
 };
