@@ -1,7 +1,4 @@
 .idea
-PSD
-.package.json.swp
-Gruntfile.js
-package.json
+app/PSD
 package-lock.json
 node_modules
