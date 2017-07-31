@@ -43,7 +43,7 @@ module.exports = function(grunt) {
                 dest : 'public/js/build.min.js',
             },
             extras: {
-                src: ['node_modules/bootstrap/dist/css/bootstrap.min.css', 'app/css/main.min.css'],
+                src: ['node_modules/bootstrap/dist/css/bootstrap.min.css', 'app/css/font-awesome.min.css',  'app/css/main.min.css'],
                 dest: 'public/css/build.min.css',
             },
         },
