@@ -14,7 +14,7 @@ module.exports = function(grunt) {
                     optimization: 2
                 },
                 files: {
-                    "app/css/main.min.css": "app/less/main.less"
+                    "app/css/main.min.css": ["app/less/slick.less", "app/less/slick-theme.less", "app/less/main.less"]
                 }
             }
         },
@@ -39,11 +39,11 @@ module.exports = function(grunt) {
     //Concat files
         concat: {
             basic: {
-                src : ['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'app/js/main.min.js'],
+                src : ['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'app/js/add/*.min.js', 'app/js/main.min.js'],
                 dest : 'public/js/build.min.js',
             },
             extras: {
-                src: ['node_modules/bootstrap/dist/css/bootstrap.min.css', 'app/css/font-awesome.min.css',  'app/css/main.min.css'],
+                src: ['node_modules/bootstrap/dist/css/bootstrap.min.css', 'app/css/font-awesome.min.css', 'app/css/main.min.css'],
                 dest: 'public/css/build.min.css',
             },
         },
