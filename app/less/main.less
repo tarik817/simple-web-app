@@ -1,3 +1,8 @@
+//var...
+@subscribeHeight : 56px;
+@btnColor : #fd926d;
+@btnColorHover : #dd6b44;
+
 //Fonts
 @font-face {
   font-family: HelveticaNeueL;
@@ -15,20 +20,23 @@
 
 body {
   font-family: "HelveticaNeueL";
+
   & ul li {
     list-style: none;
   }
 }
 
 //all buttons
-button {
+button, input.submit {
   border: none;
   background-color: #fd926d;
   border-bottom: 4px solid #fd926d;
   border-radius: 0;
   padding: 10px 10px 5px 10px;
+  transition: all .1s;
   &:hover {
     border-bottom: 4px solid #dd6b44;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
 }
 
@@ -38,7 +46,7 @@ button {
   width: 100%;
   background-color: #000;
   color: #fff;
-  font-family: ArialRegular;
+  font-family: Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   & .header-phone {
@@ -77,7 +85,6 @@ button {
     }
   }
 }
-
 .header_bottom {
   .logo {
     margin: 0 auto;
@@ -88,51 +95,117 @@ button {
   }
 }
 
-//slider styles
-.sl_slide {
-  position: relative;
-  & .sl_content {
-    position: absolute;
-    bottom: 80px;
-    left: 200px;
-    & .sl_h3 {
-      text-transform: uppercase;
-      color: #78645d;
-    }
-    & .sl_btn {
-      text-transform: uppercase;
-      color: #fff;
-      & span {
-        transform: rotate(-90deg);
-        margin-left: 10px;
+//Slider styles
+section.slider {
+  & .sl.owl-carousel {
+    position: relative;
+    width: 100%;
+    & .sl_slide {
+      & .sl_img {}
+      & .sl_content {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(0, -50%);
+        & button {
+          color: #fff;
+          font-size: 35px;
+          text-transform: uppercase;
+          padding: 20px 35px;
+          padding-bottom: 10px;
+          text-align: center;
+          & i {
+            font-size: 25px;
+          }
+        }
+        & h3 {
+          text-transform: uppercase;
+          text-align: center;
+        }
       }
     }
   }
-}
-//slider arrows style
-.sl {
-  & button.slick-arrow.slick-next {
-    &::before {
-      content: '>';
+  & .owl-nav {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    top: 50%;
+    background: none;
+    & [class*=owl-]{
+      font-size: 70px;
+      line-height: 100px;
+      transform: translate(0, -50%);
+      background: none;
+      color: #fff;
+      &:hover {
+        background: none;
+        text-shadow: 0 0 30px rgba(0,0,0,.5);
+      }
     }
-  }
-  & button.slick-arrow.slick-prev {
-    &::before {
-      content: '<';
+    & .owl-prev {
+      position: inherit;
+      left: 0;
+    }
+    & .owl-next {
+      position: inherit;
+      right: 0;
     }
   }
 }
 
-//edit slick slider styles
-.slick-dots {
-  & li button::before {
-    content: "";
-    background-color: #867a76;
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
-  }
-  & li.slick-active button::before {
-    background-color: #fda486;
+//Subscribe
+section.subscribe {
+  background-color: #ededed;
+  height: @subscribeHeight;
+  width: 100%;
+  & .col-md-6 {
+    & form {
+      position: relative;
+      height: @subscribeHeight;
+      & label {
+        position: absolute;
+        top: 50%;
+        transform: translate(0,-50%);
+        padding-bottom: 2px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 30px;
+        & input.email {
+          border: none;
+          box-shadow: none;
+          text-align: center;
+          padding-bottom: 4px;
+        }
+        & input.submit {
+          box-shadow: none;
+          color: #fff;
+          margin: 0;;
+          padding: 0 10px;
+          &:hover {
+            border-bottom: 4px solid @btnColorHover;
+          }
+        }
+      }
+    }
+    & ul.social {
+      & li {
+        display: inline-block;
+        font-size: 12px;
+        float: right;
+        padding: 17px 13px;
+        &:nth-child(2n+1) {
+          background-color: #f7f7f7;
+        }
+        & span {}
+        a {
+          padding: 17px 13px;
+          & i {
+            color: #6b6b6b;
+            font-size: 20px;
+          }
+        }
+      }
+    }
   }
 }

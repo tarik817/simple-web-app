@@ -1,8 +1,12 @@
 $(document).ready(function(){
-    $('.sl').slick({
+    $("#owl-carousel").owlCarousel({
+
+        // Наиболее важные особенности owl
+        items : 1,
+        nav: true,
+        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+        loop : true,
         autoplay : true,
-        autoplaySpeed : 3000,
-        dots : true,
-        arrows : false
+        autoplayTimeout : 4000
     });
 });
