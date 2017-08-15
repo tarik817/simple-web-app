@@ -1,7 +1,6 @@
 @lihe-height-header: 30px;
 @mobile: 768px; //max-width
 @tablet: 1024px; //max-width
-@dectop: 1025px; //min-width
 
 //Colors
 @btn-color: #fd926d;
@@ -56,6 +55,14 @@ ul {
         &.add-right-border {
           border-right: 1px solid #949494;
           display: inline-block;
+        }
+        &.my-account {
+          a {
+            i.fa {
+              color: #999;
+              margin-right: 10px;
+            }
+          }
         }
       }
     }
@@ -224,21 +231,23 @@ section.carusel {
   }
 
   .carts {
+    margin-top: 5px;
     .user-cart {
+      border-top: 1px solid #d6e9c6;
       .cart-dropdown {
         display: none;
       }
       .items {
-        border-top: 1px solid #D7D7D7;
         background-color: #FAFAFA;
       }
     }
   }
 
   .logotype {
+    text-align: center;
     a.logo {
       img {
-        margin: 10px 40%;
+        display: inline-block;
       }
     }
   }
