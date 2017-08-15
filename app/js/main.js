@@ -1,12 +1,20 @@
 $(document).ready(function(){
-    $("#owl-carousel").owlCarousel({
-
-        // Наиболее важные особенности owl
-        items : 1,
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
         nav: true,
-        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-        loop : true,
-        autoplay : true,
-        autoplayTimeout : 4000
+        autoplay: true
+    });
+
+    var prev = $('.owl-prev');
+    var next = $('.owl-next');
+    prev.html("<i class='fa fa-chevron-left fa-3x' aria-hidden='true'></i>");
+    next.html("<i class='fa fa-chevron-right fa-3x' aria-hidden='true'></i>");
+
+    $('#monitor').html($(window).width());
+
+    $(window).resize(function() {
+        var viewportWidth = $(window).width();
+        $('#monitor').html(viewportWidth);
     });
 });
