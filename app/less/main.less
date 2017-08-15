@@ -1,8 +1,7 @@
-@lihe-height-header : 30px;
-@mobile : 768px; //max-width
-@tablet : 1024px; //max-width
+@lihe-height-header: 30px;
+@mobile: 768px; //max-width
+@tablet: 1024px; //max-width
 @dectop: 1025px; //min-width
-@grid-float-breakpoint :
 
 //Colors
 @btn-color: #fd926d;
@@ -12,12 +11,16 @@ body {
   padding: 0;
 }
 
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   color: #fff;
 }
 
-ol, ul {
+ol,
+ul {
   margin: 0;
   li {
     list-style: none;
@@ -42,6 +45,7 @@ ol, ul {
       margin: 0;
     }
   }
+
   .header-top-right {
     .right {
       float: right;
@@ -49,21 +53,14 @@ ol, ul {
       li {
         line-height: @lihe-height-header;
         padding: 0 15px 0 15px;
-      }
-      li.currency {
-        border-right: 1px solid #949494;
-        display: inline-block;
-      }
-      li.my-account {
-        border-right: 1px solid #949494;
-        display: inline-block;
-      }
-      li.search {
-        border-right: 1px solid #949494;
-        display: inline-block;
+        &.add-right-border {
+          border-right: 1px solid #949494;
+          display: inline-block;
+        }
       }
     }
   }
+
   .header-bottom {
     .logotype {
       a.logo {
@@ -74,6 +71,7 @@ ol, ul {
         }
       }
     }
+
     .menu {
       nav {
         background-color: #fff;
@@ -95,6 +93,7 @@ ol, ul {
         }
       }
     }
+
     .carts {
       .user-cart {
         position: relative;
@@ -103,7 +102,7 @@ ol, ul {
           margin-top: 10px;
           button {
             background-color: #fff;
-            border-radius: 0px;
+            border-radius: 0;
             border: 1px solid #d6d6d6;
             width: 100%;
             text-align: left;
@@ -112,14 +111,15 @@ ol, ul {
               float: right;
             }
           }
+
           ul {
             width: 101%;
           }
         }
+
         .items {
-          border-right: 1px solid #d6d6d6;
-          border-left: 1px solid #d6d6d6;
-          border-bottom: 1px solid #d6d6d6;
+          border: 1px solid #d6d6d6;
+          border-top: none;
           height: 40px;
           i {
             float: left;
@@ -127,6 +127,7 @@ ol, ul {
             font-size: 16px;
             margin-left: 15px;
           }
+
           .items-block {
             float: right;
             line-height: 40px;
@@ -147,7 +148,10 @@ section.carusel {
       position: absolute;
       width: 100%;
       top: 40%;
-      .owl-prev, .owl-prev:hover {
+      .owl-prev,
+      .owl-prev:hover,
+      .owl-next,
+      .owl-next:hover {
         float: left;
         padding: 15px 0 0 0;
         line-height: 120px;
@@ -155,15 +159,13 @@ section.carusel {
         background-color: #fefefd;
         color: #cbcbca;
       }
-      .owl-next, .owl-next:hover  {
+
+      .owl-next,
+      .owl-next:hover  {
         float: right;
-        padding: 15px 0 0 0;
-        line-height: 120px;
-        margin: 0;
-        background-color: #fefefd;
-        color: #cbcbca;
       }
     }
+
     .owl-dots {
       .active {
         span {
@@ -172,6 +174,7 @@ section.carusel {
       }
     }
   }
+
   .time-line {
     position: absolute;
     z-index: 9999;
