@@ -184,17 +184,83 @@ section.sign {
         ul.find-us {
           display: flex;
           justify-content: flex-end;
+          span {
+            line-height: 54px;
+            margin-right: 15px;
+          }
           li {
             a {
+              width: 54px;
               color: @grey-font;
-              i {}
+              i {
+                line-height: 54px;
+                width: 54px;
+                text-align: center;  }
+              }
+            &:nth-child(2n) {
+              background-color: #f7f7f7;
             }
           }
         }
       }
     }
   }
+}
 
+main {
+  .wraper-grid {
+    width: 100%;
+    height: 340px;
+    position: relative;
+    .large-col {
+      &:first-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        a {
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .medium-col {
+        &:first-child {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          height: 50%;
+          width: 50%;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+        .smoll-col {
+          position: absolute;
+          top: 50%;
+          height: 50%;
+          width: 25%;
+          &:first-child {
+            left: 50%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &:last-child {
+            left: 75%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: @mobile) {
@@ -265,5 +331,40 @@ section.sign {
   .navbar-default .navbar-text {
     color: #fff;
     font-size: 18px;
+  }
+
+  section.sign {
+    .container {
+      .row {
+        .email {
+          label {
+            display: none;
+          }
+          input.mail {
+            text-align: center;
+            font-size: 30px;
+            line-height: 100px;
+            width: 90%;
+          }
+          input.submit {
+            font-size: 30px;
+            padding: 35px 0;
+            width: 9%;
+          }
+        }
+        .social {
+          display: flex;
+          justify-content: center;
+          a {
+            width: 90px;
+            i.fa-twitter {
+              background-color: #ededed;
+              line-height: 90px;
+              width: 90px;
+            }
+          }
+        }
+      }
+    }
   }
 }
