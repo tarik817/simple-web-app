@@ -4,6 +4,9 @@
 
 //Colors
 @btn-color: #fd926d;
+@btn-bottom: #dd6b44;
+@grey: #ededed;
+@grey-font: #6b6b6b;
 
 body {
   margin: 0;
@@ -146,56 +149,57 @@ ul {
   }
 }
 
-section.carusel {
-  margin: 15px 0 15px 0;
-  position: relative;
-  .owl-carousel {
-    position: relative;
-    .owl-nav {
-      position: absolute;
-      width: 100%;
-      top: 40%;
-      .owl-prev,
-      .owl-prev:hover,
-      .owl-next,
-      .owl-next:hover {
-        float: left;
-        padding: 15px 0 0 0;
-        line-height: 120px;
-        margin: 0;
-        background-color: #fefefd;
-        color: #cbcbca;
+section.sign {
+  background-color: @grey;
+  .container {
+    .row {
+      position: relative;
+      .email {
+        margin: 10px 0 12px 0;
+        label {
+          color: @grey-font;
+          margin-right: 5px;
+        }
+        input.mail {
+          line-height: 30px;
+          text-align: center;
+          font-size: 12px;
+          font-style: italic;
+          border: none;
+        }
+        input.submit {
+          color: #fff;
+          border: none;
+          border-bottom: 2px solid @btn-bottom;
+          background: @btn-color;
+          line-height: 28px;
+          padding: 0 10px;
+          font-weight: 800;
+          &:hover {
+            background-color: @btn-bottom;
+          }
+        }
       }
-
-      .owl-next,
-      .owl-next:hover  {
-        float: right;
-      }
-    }
-
-    .owl-dots {
-      .active {
-        span {
-          background-color: @btn-color;
+      .social {
+        ul.find-us {
+          display: flex;
+          justify-content: flex-end;
+          li {
+            a {
+              color: @grey-font;
+              i {}
+            }
+          }
         }
       }
     }
   }
 
-  .time-line {
-    position: absolute;
-    z-index: 9999;
-    height: 10px;
-    width: 100%;
-    bottom: 5%;
-    background: #000;
-    opacity: .1;
-  }
 }
 
 @media (max-width: @mobile) {
   section.carusel {
-    visibility: hidden;
+    display: none;
   }
 
   .navbar-header {
