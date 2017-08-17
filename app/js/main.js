@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
+    $('.slider-top').owlCarousel({
         items: 1,
         loop: true,
         nav: true,
@@ -16,5 +16,15 @@ $(document).ready(function(){
     $(window).resize(function() {
         var viewportWidth = $(window).width();
         $('#monitor').html(viewportWidth);
+    });
+
+    $('.product-carusel').owlCarousel({
+        items: 8,
+        nav: false,
+        dots: false,
+        margin: 32,
+        autoWidth: true,
+        center: true,
+        loop: true
     });
 });
